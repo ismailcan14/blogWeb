@@ -1,8 +1,12 @@
+using blogWeb.Context;
+
+//PROGRAM ÝLK ÇALIÞTIÐINDA PROGRAM.CS ÇALIÞIR !!!
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddDbContext<BlogDbContext>(); //Oluþturdugumuz DbContext i programýmýza burada tanýmlýyoruz.!
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
