@@ -21,5 +21,10 @@ namespace blogWeb.Controllers
             var blog=_context.Blogs.ToList();
             return View(blog);
         }
+        public IActionResult EditBlog(int id)
+        {
+            var blog = _context.Blogs.Where(x=>x.Id==id).FirstOrDefault();  
+            return View(blog);
+        }
     }
 }
